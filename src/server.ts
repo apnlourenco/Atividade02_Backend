@@ -1,11 +1,10 @@
-import cors from 'cors';
+import cors from "cors";
+import dotenv from 'dotenv';
 import express, { ErrorRequestHandler, Request, Response } from 'express';
 import path from 'path';
 import { conectarBanco } from './instances/mysql';
-import apiRoutes from './routes/routes';
 import "./models/associations";
-import { configDotenv } from 'dotenv';
-import dotenv from 'dotenv'
+import apiRoutes from './routes/routes';
 
 dotenv.config();
 

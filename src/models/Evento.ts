@@ -11,11 +11,10 @@ export class Evento extends Model<
   declare nome: string;
   declare data: Date;
 
-  // Métodos de associação
   declare addParticipante: (participante: Participante) => Promise<void>;
   declare getParticipantes: () => Promise<Participante[]>;
   declare setParticipantes: (participantes: Participante[]) => Promise<void>;
-  declare participantes?: NonAttribute<Participante[]>; // útil pra incluir no findAll
+  declare participantes?: NonAttribute<Participante[]>; 
 }
 
 Evento.init<InferAttributes<Evento>, InferCreationAttributes<Evento>>({
